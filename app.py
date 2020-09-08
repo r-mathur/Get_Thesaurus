@@ -28,6 +28,7 @@ input_keyword = input("Enter a word : ")
 
 result = translate(input_keyword)
 
+print("\nOutput : ")
 if type(result) == list:
     for item in result:
         print(item)
