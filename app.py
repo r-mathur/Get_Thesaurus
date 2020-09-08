@@ -8,6 +8,12 @@ def translate(keyword):
     if keyword in data:
         return data[keyword]
 
+    elif keyword.title() in data:
+        return data[keyword.title()]
+
+    elif keyword.upper() in data:
+        return data[keyword.upper()]
+
     elif len(get_close_matches(keyword, data.keys(), cutoff=0.72)) > 0 :
 
         choice = input("Did you mean %s instead? [Yes(Y)/No(N)]: " % get_close_matches(keyword, data.keys())[0])
